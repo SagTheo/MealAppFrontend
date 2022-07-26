@@ -13,7 +13,6 @@ const Navbar = () => {
         fetch(`${baseUrl}/auth/checkUser/${userToken}`)
             .then(res => res.json())
             .then(data => {
-              console.log(data.response)
               if (data.response === null) {
                 navigate('/')
               } else {
