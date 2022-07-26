@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/FoodSearch.css'
 import Navbar from '../components/Navbar'
 
+const baseUrl = 'https://meal-app-pp.herokuapp.com'
+
 const NewMeal = () => {
     const [foodSearch, setFoodSearch] = useState('')
     const [matches, setMatches] = useState()
@@ -32,7 +34,7 @@ const NewMeal = () => {
       //for the '/' route, not the one for the '/:food' route
       if (food === '') return
   
-      fetch(`https://meal-app-pp.herokuapp.com/${food}`)
+      fetch(`${baseUrl}/${food}`)
         .then(res => res.json())
         .then(data => {
           if (data.data.length === 0) {
@@ -100,7 +102,7 @@ const NewMeal = () => {
     }
 
     const saveMeal = () => {
-      fetch('https://meal-app-pp.herokuapp.com/meals/saveMeal', {
+      fetch(`${baseUrl}/meals/saveMeal`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

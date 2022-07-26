@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import styles from '../css/MyMeals.module.css'
 
+const baseUrl = 'https://meal-app-pp.herokuapp.com'
+
 const MyMeals = () => {
   const userToken = localStorage.getItem('userToken')
 
@@ -10,7 +12,7 @@ const MyMeals = () => {
   // To remove meal from MyMeals page. If request successful, document.location.reload()
   // will refresh the current URL which will trigger useEffect() and display user's meals
   const removeMeal = (mealId) => {
-    fetch(`https://meal-app-pp.herokuapp.com/meals/removeMeal/${mealId}`, { method: 'DELETE' })
+    fetch(`${baseUrl}/meals/removeMeal/${mealId}`, { method: 'DELETE' })
       .then(res => res.json())
       .then(response => {
         if (response.response === 'OK') {
@@ -21,7 +23,7 @@ const MyMeals = () => {
   }
 
   useEffect(() => {
-    fetch(`https://meal-app-pp.herokuapp.com/meals/getMeals/${userToken}`)
+    fetch(`${baseUrl}/meals/getMeals/${userToken}`)
       .then(res => res.json())
       .then(response => {
         setMealsToDisplay(response.response)

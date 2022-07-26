@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react'
 import UserNavbar from './UserNavbar'
 import { Link, useNavigate } from 'react-router-dom'
 
+const baseUrl = 'https://meal-app-pp.herokuapp.com'
+
 const Navbar = () => {  
     const userToken = localStorage.getItem('userToken') 
     const [userEmail, setUserEmail] = useState()
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`https://meal-app-pp.herokuapp.com/auth/checkUser/${userToken}`)
+        fetch(`${baseUrl}/auth/checkUser/${userToken}`)
             .then(res => res.json())
             .then(data => {
               console.log(data.response)
