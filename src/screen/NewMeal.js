@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/FoodSearch.css'
 import Navbar from '../components/Navbar'
 
-const baseUrl = 'https://meal-app-pp.herokuapp.com'
+const baseUrl = '/request'
 
 const NewMeal = () => {
     const [foodSearch, setFoodSearch] = useState('')

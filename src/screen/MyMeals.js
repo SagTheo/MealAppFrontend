@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import styles from '../css/MyMeals.module.css'
 
-const baseUrl = 'https://meal-app-pp.herokuapp.com'
+const baseUrl = '/request'
 
 const MyMeals = () => {
   const userToken = localStorage.getItem('userToken')

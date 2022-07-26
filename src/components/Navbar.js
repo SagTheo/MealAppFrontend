@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import UserNavbar from './UserNavbar'
 import { Link, useNavigate } from 'react-router-dom'
 
-const baseUrl = 'https://meal-app-pp.herokuapp.com'
+const baseUrl = '/request'
 
 const Navbar = () => {  
     const userToken = localStorage.getItem('userToken') 

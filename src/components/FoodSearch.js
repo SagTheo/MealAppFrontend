@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/FoodSearch.css'
 import FoodInfo from './FoodInfo'
 
-const baseUrl = 'https://meal-app-pp.herokuapp.com'
+const baseUrl = '/request'
  
 const FoodSearch = () => {
     const [data, setData] = useState()
