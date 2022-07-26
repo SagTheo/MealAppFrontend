@@ -1,0 +1,19 @@
+.app_div_buttons {
+    width: 10%;
+}
+
+.app_searchButton {
+    width: fit-content;
+}
+
+.foodSearch_link {
+    color: white;
+}
+
+.foodSearch_link:hover {
+    color: rgba(255, 255, 255, 0.652);
+}
+
+.trashcan:hover {
+    cursor: pointer;
+}
