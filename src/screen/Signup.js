@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import { Link, useNavigate } from 'react-router-dom'
 
+const baseUrl = 'https://meal-app-pp.herokuapp.com'
+
 const Signup = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
