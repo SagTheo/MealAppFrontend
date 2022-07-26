@@ -43,7 +43,7 @@ const handleSubmit = (e) => {
        return
     } else {
         e.preventDefault()
-       fetch('https://meal-app-pp.herokuapp.com/auth/login', { 
+       fetch('/api/auth/login', { 
            method: 'POST',
            headers: { 'Content-Type' : 'application/json' },
            body: JSON.stringify({

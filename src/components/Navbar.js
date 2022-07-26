@@ -8,7 +8,7 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`https://meal-app-pp.herokuapp.com/auth/checkUser/${userToken}`)
+        fetch(`/api/auth/checkUser/${userToken}`)
             .then(res => res.json())
             .then(data => {
               if (data.response === null) {
