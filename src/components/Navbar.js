@@ -11,6 +11,7 @@ const Navbar = () => {
         fetch(`https://meal-app-pp.herokuapp.com/auth/checkUser/${userToken}`)
             .then(res => res.json())
             .then(data => {
+              console.log(data.response)
               if (data.response === null) {
                 navigate('/')
               } else {
