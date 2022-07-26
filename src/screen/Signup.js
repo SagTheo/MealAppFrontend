@@ -60,7 +60,7 @@ const Signup = () => {
        return
     } else {
         e.preventDefault()
-        fetch('/api/auth/signup', {
+        fetch('https://meal-app-pp.herokuapp.com/auth/signup', {
            method: "POST",
            headers: { 'Content-Type' : 'application/json' },
            body: JSON.stringify({

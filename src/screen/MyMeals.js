@@ -10,7 +10,7 @@ const MyMeals = () => {
   // To remove meal from MyMeals page. If request successful, document.location.reload()
   // will refresh the current URL which will trigger useEffect() and display user's meals
   const removeMeal = (mealId) => {
-    fetch(`/api/meals/removeMeal/${mealId}`, { method: 'DELETE' })
+    fetch(`https://meal-app-pp.herokuapp.com/meals/removeMeal/${mealId}`, { method: 'DELETE' })
       .then(res => res.json())
       .then(response => {
         if (response.response === 'OK') {
@@ -21,7 +21,7 @@ const MyMeals = () => {
   }
 
   useEffect(() => {
-    fetch(`/api/meals/getMeals/${userToken}`)
+    fetch(`https://meal-app-pp.herokuapp.com/meals/getMeals/${userToken}`)
       .then(res => res.json())
       .then(response => {
         setMealsToDisplay(response.response)

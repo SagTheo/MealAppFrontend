@@ -23,7 +23,7 @@ const FoodSearch = () => {
       //for the '/' route, not the one for the '/:food' route
       if (food === '') return
   
-      fetch(`/api/${food}`)
+      fetch(`https://meal-app-pp.herokuapp.com/${food}`)
         .then(res => res.json())
         .then(data => {
           if (data.data.length === 0) {
@@ -44,7 +44,7 @@ const FoodSearch = () => {
   
     //To retrieve a few items from the database when the component mounts
     useEffect(() => {
-      fetch('/api/')
+      fetch('https://meal-app-pp.herokuapp.com')
         .then(res => res.json())
         .then(data => setData(data.data))
         .catch(err => console.log(err))
